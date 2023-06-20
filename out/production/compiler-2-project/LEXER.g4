@@ -1,0 +1,116 @@
+lexer grammar LEXER;
+
+//...........public..........
+VOID:SPACE 'void' SPACE;
+TYPE:SPACE 'int'|'var'|'char'|'string'SPACE;
+CLASS :SPACE 'class' SPACE;
+STATIC:SPACE 'static' SPACE;
+////////////////MAIN:SPACE 'main' SPACE;
+RETURN:SPACE 'return' SPACE;
+EXTENDS:SPACE 'extends' SPACE;
+OVERRIDE:SPACE '@override' SPACE;
+PRINT:SPACE 'print' SPACE;
+BIG:SPACE'<'SPACE;
+SMALL:SPACE'>'SPACE;
+BODY:SPACE 'body'SPACE;
+CIRCLEAVATAR:SPACE 'CircleAvatar'SPACE;
+COLUMN:SPACE'Column'SPACE;
+CHILDREN:SPACE'children'SPACE;
+BACKGROUNDCOLOR:SPACE'backgroundColor' SPACE;
+ICON:SPACE 'Icon'SPACE;
+SIZE:SPACE 'size'SPACE;
+RADIUS:SPACE'radius'SPACE;
+APPBARR:SPACE'appBar'SPACE;
+TITLE:SPACE 'title'SPACE;
+//..........If OR For...............
+IF:SPACE 'if' SPACE;
+FOR:SPACE 'for' SPACE;
+TRUE:SPACE 'true' SPACE;
+FALSE: SPACE 'false' SPACE;
+IN: SPACE 'in' SPACE;
+ELSE:SPACE 'else' SPACE;
+WHILE:SPACE 'while' SPACE;
+NOT:SPACE '!' SPACE;
+OR:SPACE '||' SPACE;
+
+//............Flutter ...................
+TEXT:SPACE 'Text' SPACE;
+STYLE:SPACE'style'SPACE;
+TEXTSTYLE:SPACE'TextStyle'SPACE;
+WIDGET:SPACE'Widget'SPACE;
+BUILD:SPACE'build'SPACE;
+FIT:SPACE'fit'SPACE;
+BUILDCONTEXT:SPACE'BuildContext'SPACE;
+CONTEXT:SPACE'context'SPACE;
+INKWEL:SPACE'InkWell'SPACE;
+ONTAP:SPACE'onTap'SPACE;
+ONPRESSED:SPACE'onPressed'SPACE;
+CHILD:SPACE'child'SPACE;
+PADD:SPACE'padding'SPACE;
+TEXTFIELD:SPACE'TextFormField'SPACE;
+DECORATION:SPACE'decoration'SPACE;
+INPUT:SPACE'InputDecoration'SPACE;
+PADDING:SPACE'Padding'SPACE;
+CONTAINER:SPACE'Container'SPACE;
+HEIGHT:SPACE'height'SPACE;
+SIZEBOX:SPACE 'SizedBox'SPACE;
+LABELTEXT:SPACE 'labelText'SPACE;
+BOXDECORATION:SPACE 'BoxDecoration'SPACE;
+WIDTH:SPACE 'width'SPACE;
+TEXTBUTTON:SPACE 'TextButton'SPACE;
+BORDER:SPACE 'border'SPACE;
+ALIGMENT:SPACE'alignment'SPACE;
+CLIPRRECT:SPACE'ClipRRect' SPACE;
+STATELESSWIDGET: SPACE 'StatelessWidget' SPACE;
+REQUIRED:SPACE 'required' SPACE;
+THIS:SPACE 'this' SPACE;
+SCAFOLD:SPACE 'Scaffold' SPACE;
+APPBAR:SPACE 'AppBar' SPACE;
+COLOR:SPACE 'color' SPACE;
+CENTER:SPACE'Center'SPACE;
+BACKCOLOR: SPACE 'backgroundColor' SPACE;
+PRODUCT: SPACE 'Product' SPACE;
+NAVIGATOR:SPACE 'Navigator'SPACE;
+
+//............Key..............
+FINAL:SPACE 'final'SPACE;
+CONST:SPACE 'const'SPACE;
+
+
+//...........speceal..........
+SEMI:SPACE ';' SPACE;
+DOT:SPACE '.' SPACE;
+COLOMN:SPACE ':' SPACE;
+COMA:SPACE ',' SPACE;
+CURLYOPEN: SPACE '{' SPACE;
+CURLYCLOSE: SPACE '}' SPACE;
+BRACOPEN: SPACE '(' SPACE ;
+BRACCLOSE: SPACE ')' SPACE ;
+SEQOPEN:SPACE '[' SPACE;
+SEQCLOSE: SPACE ']' SPACE;
+STRING:SPACE '"' ~[/"]*  '"'SPACE;
+CHAR:SPACE '\'' ~[/']* '\'' SPACE;
+URL:SPACE'\''~['"<>()' ']+'\''SPACE;
+OPER:SPACE '+'|'-'|'*'|'/'SPACE ;
+SIGNAL:SPACE '+='|'+'|'-='|'-'|'/='|'*='|'*'|'/' SPACE;
+SIGNALS:SPACE '--'|'++' SPACE;
+EQUAL:SPACE'=' SPACE;
+COMPARISON:SPACE('=='|'!='|'<'|'>'|'<='|'>=')SPACE;
+
+
+//................Space Or NewLine...........
+TAG_WHITESPACE:[ \t\r\n] -> channel(HIDDEN);
+
+
+//................vareble..........
+NAME: VAREBLENAMEE ;
+NUMBER:  SPACE DIGIT+ SPACE ;
+
+
+//..............fragment........
+fragment SPACE:' '*;
+fragment VAREBLENAMEE:  [a-zA-Z_] [a-zA-Z0-9_]* ;
+fragment
+DIGIT: [0-9];
+
+

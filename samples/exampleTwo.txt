@@ -1,0 +1,33 @@
+class _loginScreenState extends State<LoginScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Login',),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+
+          children: <Widget>[
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Email',
+              ),
+            ),
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Password',
+              ),
+            ),
+             onPressed: () {
+                Navigator.of(context).pushNamed(home.name);
+              },
+              child: Text('Login',),
+            ],
+        ),
+      ),
+    );
+  }
+}

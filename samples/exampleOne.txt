@@ -1,0 +1,29 @@
+class letailsState extends State<Details> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('My Home Screen',),
+        ),
+        body: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(top: 100.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text('Details page',),
+                      Container(
+                        color: Colors.grey,
+                        color: Colors.grey,
+                        child: Icon(Icons.production_quantity_limits,),
+                      ),
+                    ],
+                  ),
+                )
+         ,     ],),
+        ),);
+  }
+}
